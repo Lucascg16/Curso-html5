@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Google Glass</title>
+</head>
+<link rel="stylesheet" href="_css/estilo.css">
+<link rel="stylesheet" href="_css/media.css">
+<script src="_javascript/funcoes.js"></script>
+
+<body>
+    <div id="interface">
+
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google Não está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/multimidia.png" alt="">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ol>
+                    <li><a href="index.html" onmousemove="mudaIcone('_imagens/home.png')"
+                            onmouseout="mudaIcone('_imagens/multimidia.png')">Home</a></li>
+                    <li><a href="specs.html" onmousemove="mudaIcone('_imagens/especificacoes.png')"
+                            onmouseout="mudaIcone('_imagens/multimidia.png')">Especificações</a></li>
+                    <li><a href="fotos.html" onmousemove="mudaIcone('_imagens/fotos.png')"
+                            onmouseout="mudaIcone('_imagens/multimidia.png')">Fotos</a></li>
+                    <li><a href="multimidia.html" onmousemove="mudaIcone('_imagens/multimidia.png')"
+                            onmouseout="mudaIcone('_imagens/multimidia.png')">Multimídia</a></li>
+                    <li><a href="fale-conosco.html" onmousemove="mudaIcone('_imagens/contato.png')"
+                            onmouseout="mudaIcone('_imagens/multimidia.png')">Fale conosco</a></li>
+                </ol>
+            </nav>
+        </header>
+
+        <section id="corpo-full">
+            <header id="cabecalhoArtigo">
+                <hgroup id="top">
+                    <h3>Glass > Multimídia</h3>
+                    <h1>Sons e Vídeos</h1>
+                    <h2>por Gustavo Guanabara(Aula HTML5)</h2>
+                    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </header>
+        </section>
+
+        <div id="tv-radio">
+            <p>Áudio e Vídeo</p>
+
+            <audio id="musica" controls="controls">
+                <source src="_media/Rick Astley - Never Gonna Give You Up (Video).mp3" type="audio/mpeg">
+                Video não suportado
+            </audio>
+            <iframe id="filme" width="460" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <footer id="rodape">
+            <p>
+                Copyright &copy; 2021 - by Gustavo Guanabara/Lucascg
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

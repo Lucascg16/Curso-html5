@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Google Glass</title>
+</head>
+<link rel="stylesheet" href="_css/estilo.css">
+<link rel="stylesheet" href="_css/form.css">
+<script src="_javascript/funcoes.js"></script>
+<script>
+    function calcTotal() {
+        var qtd = Number(document.getElementById('cQTD').value)
+        var tot = qtd * 1500
+        document.getElementById('cTOT').value = tot
+
+    }
+</script>
+
+<body>
+    <div id="interface">
+
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google Não está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/contato.png" alt="">
+
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ol>
+                    <li><a href="index.html" onmousemove="mudaIcone('_imagens/home.png')"
+                            onmouseout="mudaIcone('_imagens/contato.png')">Home</a></li>
+                    <li><a href="specs.html" onmousemove="mudaIcone('_imagens/especificacoes.png')"
+                            onmouseout="mudaIcone('_imagens/contato.png')">Especificações</a></li>
+                    <li><a href="fotos.html" onmousemove="mudaIcone('_imagens/fotos.png')"
+                            onmouseout="mudaIcone('_imagens/contato.png')">Fotos</a></li>
+                    <li><a href="multimidia.html" onmousemove="mudaIcone('_imagens/multimidia.png')"
+                            onmouseout="mudaIcone('_imagens/contato.png')">Multimídia</a></li>
+                    <li><a href="fale-conosco.html" onmousemove="mudaIcone('_imagens/contato.png')"
+                            onmouseout="mudaIcone('_imagens/contato.png')">Fale conosco</a></li>
+                </ol>
+            </nav>
+        </header>
+
+        <section>
+            <header id="cabecalhoArtigo">
+                <hgroup id="top">
+                    <h3>Fale conosco > Contato</h3>
+                    <h1>Formulario de contato</h1>
+                    <h2>por Gustavo Guanabara(Aula HTML5)</h2>
+                    <h3 class="direita">Atualizado em 23/Abril/2013</h3>
+                </hgroup>
+            </header>
+
+            <article>
+                <form method="POST" id="fContato" oninput="calcTotal()">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                        <p><label for="cName">Nome:</label><input type="text" id="cName" size="20" maxlength="20"></p>
+                        <p><label for="cSenha">Senha:</label><input type="password" id="cSenha" size="20"
+                                maxlength="20"></p>
+                        <p><label for="cMail">E-mail:</label><input type="email" id="cMail" size="20" maxlength="40">
+                        </p>
+                        <fieldset id="sexo">
+                            <legend>Sexo:</legend>
+                            <p><input type="radio" name="tSex" id="cMas"><label for="cMas">Masculino</label></p>
+                            <p><input type="radio" name="tSex" id="cFem"><label for="cFem">Feminino</label></p>
+                        </fieldset>
+                        <p><label for="cData">Data de Nascimento:</label><input type="date" id="cData"></p>
+                    </fieldset>
+
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p><label for="cRua">Logradouro:</label><input type="text" id="cRua" size="13" maxlength="80"
+                                placeholder="Endeireço"></p>
+                        <p><label for="cNum">Número:</label><input type="number" id="cNum" min="0" max="99999"></p>
+                        <p><label for="cEstado">Estado:</label><select id="cEstado" name="estado">
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP" selected>São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                                <option value="EX">Estrangeiro</option>
+                            </select></p>
+                        <p><label for="cCidade">Cidade:</label><input type="text" id="cCidade" maxlength="40" size="20"
+                                placeholder="Digite a cidade."></p>
+                    </fieldset>
+
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                        <p>Grau de Urgência: min<input type="range" name="" id="cUrg" min="0" max="10">max</p>
+                        <p>Mensagem:
+                            <textarea name="" id="cTex" cols="35" rows="5" placeholder="Sua Mensagem"></textarea>
+                        </p>
+                    </fieldset>
+
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                        <p><input type="checkbox" name="" id="cCheck"><label for="cCheck">Gostaria de adquirir um Google
+                                Glass quando disponível</label> </p>
+                        <p>Cor: <input type="color" name="" id="cColor" value="#ff0000"></p>
+                        <p><label for="cQTD">Quantidade:</label><input type="number" name="" id="cQTD"></p>
+                        <p><label for="cTOT">Preço Total:R$</label><input type="text" name="" id="cTOT"
+                                placeholder="Total a pagar" readonly></p>
+                    </fieldset>
+
+                    <input type="image" name="" id="cEnviar" src="_imagens/botao-enviar.png">
+                </form>
+            </article>
+        </section>
+
+        <footer id="rodape">
+            <p>Copyright &copy; 2021 - by Gustavo Guanabara/Lucascg</p>
+        </footer>
+    </div>
+</body>
+
+</html>
